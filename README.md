@@ -112,7 +112,7 @@ flowchart TB
 ### Quickstart
 
 1. **Clone repository**
-    - Open project root: `LLM_PDF`.   needs new name here
+    - Open project root: `LLM_PDF`
 
 2. **Set Up Virtual Environment** 
    
@@ -131,7 +131,7 @@ flowchart TB
 
 3. **Run notebook (locally) with Jupyter:**
    ```bash
-    jupyter notebook RAG_pipeline.ipynb
+    jupyter notebook notebooks/hybrid_rag_pipeline.ipynb
     ```
 
 4. **Install Dependencies:**
@@ -140,7 +140,7 @@ Create a `requirements.txt` file and install dependencies:
     pip install -r requirements.txt
     ```
 
-```   ✓  updated 9/22
+```   
 numpy
 pandas
 scikit-learn
@@ -157,6 +157,26 @@ nbformat
 nbconvert
 PyYAML
 ```
+
+5. **Test Run**
+   1. Run notebook as mentioned (Step 3 above)
+   
+   2.  Integration Test (unittest)
+Run the built-in Python test suite:
+    ```bash
+    python -m unittest tests/test_integration.py
+    ```
+    -OR-
+
+   3. Integration Test (pytest) -> install it first and then run the test: 
+   ```bash
+   pip install pytest
+   python -m pytest tests/test_integration.py
+   ```
+`NOTE:` Pytest does the same validation as the unittest version
+
+A successful test confirms the full pipeline—from PDF reading and embedding to FAISS retrieval and LLM generation—is functioning correctly and producing the expected results.
+
 ***
 ***
 ***

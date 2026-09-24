@@ -1,7 +1,14 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
 *.py[codz]
 *$py.class
+
+# Python cache / bytecode
+pycache/
+*.pyc
+*.pyo
+*.pyd
 
 # C extensions
 *.so
@@ -21,6 +28,8 @@ sdist/
 var/
 wheels/
 share/python-wheels/
+pip-wheel-metadata/
+pip-wheel-metadata/*
 *.egg-info/
 .installed.cfg
 *.egg
@@ -57,6 +66,8 @@ cover/
 
 # Django stuff:
 *.log
+*.sqlite
+*.db
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -151,11 +162,23 @@ activemq-data/
 .env
 .envrc
 .venv
+.venv/
 env/
+envs/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Conda / Anaconda
+.conda/
+.continuum/
+anaconda3/
+miniconda3/
+*.condarc
+
+# Cached models / large downloads
+models--t5-base/
 
 # Spyder project settings
 .spyderproject
@@ -203,6 +226,10 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Editors / IDEs 
+vscode/
+.vscode/
+
 # Ruff stuff:
 .ruff_cache/
 
@@ -216,3 +243,39 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Model Weights & Runtime locks - generated data
+models/
+.locks/
+data/
+data/*.index
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Folders
+docs_ai/
+
+# Vectors and embeddings
+embeddings/*
+Faiss_index/
+faiss_index/
+*.vectors
+faiss_db/
+faiss_db/*
+
+# Logs 
+logs/*.log
+
+# Data & Generated Outputs 
+# Ignore all generated files in the data folder
+data/*.json
+data/*.csv
+data/*.txt
+data/*.index
+
+# Keep the source PDF (Whitelist)
+!data/Tech_article.pdf
+
+visual/
