@@ -1,0 +1,33 @@
+# configs/config.yaml
+data:
+  pdf_path: "Tech_article.pdf"      
+  output_dir: "LLM_PDF"
+
+models:
+  embedding: "sentence-transformers/all-MiniLM-L6-v2"
+  generation: "t5-base"
+  device: "cpu"                  
+
+chunking:
+  size: 125
+  overlap: 0.20
+
+faiss:
+  index_type: "FlatIP"
+  metric: "inner_product"
+
+retrieval:
+  top_k: 4
+  score_threshold: 0.5
+
+llm:
+  system_prompt: |
+    You are an assistant that extracts the core thesis of a scientific article.
+  max_new_tokens: 150
+  temperature: 0.0
+
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
+  rotate_when: "midnight"          # daily rotation
+  backup_count: 7

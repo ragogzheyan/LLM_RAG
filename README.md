@@ -8,26 +8,27 @@ A fully offline question-answering system that processes PDF documents end-to-en
 ## Folder Structure 
 
 ``` 
-pdf_rag_pipeline/
+LLM_RAG/
 ├── configs/
-│   └── config.yaml                 # Central configuration
+│   └── config.yaml                   # Central configuration
 ├── data/
-│   └── Tech_article.pdf            # Source document for testing
+│   └── Tech_article.pdf              # Source document for testing
 ├── docs_ai/
-│   ├── .instructions.md            # User guide/Manual
-│   ├── .notes.md                   # Technical design decisions
-│   └── architecture.md             # Data flow table file size
+│   ├── .instructions.md              # User guide/Manual
+│   ├── .notes.md                     # Technical design decisions
+│   └── architecture.md               # Data flow table file size
 ├── logs/
-│   └── logger.py                   # Logging logic
+│   └── logger.py                     # Logging logic
 ├── notebooks/
-│   └── hybrid_rag_pipeline.ipynb   # Main pipeline implementation
+│   └── hybrid_rag_pipeline.ipynb     # Main pipeline implementation
 ├── tests/
-│   └── test_integration.py         # End-to-end validation script
+│   └── test_integration.py           # End-to-end validation script
 ├── visual/
-│   └── Architecture.png            # Pipeline workflow diagram
-├── .gitignore                      # Git exclusion rules
-├── requirements.txt                # Dependency list
-└── README.md                       # Project overview and setup
+│   ├── Architecture.png              # Pipeline workflow diagram
+│   └── embedding_visualization.html  # Scatter plot with embedding
+├── .gitignore                        # Git exclusion rules
+├── requirements.txt                  # Dependency list
+└── README.md                         # Project overview and setup
 ```
 ***
 ***
@@ -112,7 +113,7 @@ flowchart TB
 ### Quickstart
 
 1. **Clone repository**
-    - Open project root: `LLM_PDF`
+    - Open project root: `LLM_RAG`
 
 2. **Set Up Virtual Environment** 
    
